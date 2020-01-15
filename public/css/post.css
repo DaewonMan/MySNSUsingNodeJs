@@ -1,0 +1,278 @@
+@charset "EUC-KR";
+@font-face {
+	font-family: tvNB;
+	src: url('../font/tvNBold.ttf');
+}
+@font-face {
+	font-family: bmHN;
+	src: url('../font/BMHANNA_11yrs_ttf.ttf');
+}
+@font-face {
+	font-family: bmJUA;
+	src: url('../font/BMJUA_ttf.ttf');
+}
+@font-face {
+	font-family: bmKH;
+	src: url('../font/BMKIRANGHAERANG-TTF.ttf');
+}
+
+@font-face {
+	font-family: bmDH;
+	src: url('../font/BMDOHYEON_ttf.ttf');
+}
+
+@font-face {
+	font-family: bmYS;
+	src: url('../font/BMYEONSUNG_ttf.ttf');
+}
+@font-face {
+	font-family: gabia;
+	src: url('../font/gabia_solmee.ttf');
+}
+
+#postTb{
+	width: 1100px;
+}
+.postTd{
+	width: 370px;
+	height: 360px;
+	position: relative;
+}
+#postImg{
+	width: 330px;
+	height: 330px;
+	box-shadow: 5px 5px 15px #8D6E63;
+	
+	opacity: 1;
+	transition: .5s ease;
+  	backface-visibility: hidden;
+}
+
+.postTd:hover #postImg{
+	border: white solid 5px;
+	box-shadow: 5px 5px 10px #A1887F;
+	
+	opacity: 0.3;
+	
+  	object-fit: cover;
+	border-radius: 50%;
+	display: block;
+	margin:0 auto;
+}
+/**/
+.middle {
+  	transition: .5s ease;
+  	opacity: 0;
+  	position: absolute;
+  
+  	top: 50%;
+  	left: 50%;
+  	text-align: center;
+  
+  	transform: translate(-50%, -50%);
+ 	-ms-transform: translate(-50%, -50%);
+	
+	font-family: tvNB;
+  	color: black;
+  	font-size: 35px;
+  	font-weight: 1400;
+  	padding: 16px 32px;
+  	width: 80%;
+}
+.postTd:hover .middle{
+	opacity: 1;
+}
+
+.df {
+	margin-top: 70px;
+	border-spacing: 0px;
+	background-color: #00000000;
+	
+	border: none;
+	
+	width: 1110px;
+	height: 550px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+.postDetailbtnTd{
+	height: 50px;
+	background-color: #00000000;
+}
+.postDetailbtnTd button{
+	font-size: 25pt;
+	font-weight: 600;
+	border: none;
+	outline: none;
+	color: white;
+	background-color: #00000000;
+}
+
+.postDetailImgTd{
+	width: 700px;
+	background-color: #424242;
+}
+.postDetailImgTd img{
+	width: 400px;
+}
+.postDetailDescTd{
+	background-color: white;	
+}
+#postDetailDescTb{
+	background-color: white;
+	width: 90%;
+	height: 100%;
+	border-spacing: 0px;
+}
+.DescTitleTr td{
+	height: 50px;
+	border-bottom: .5px #8D6E6388 solid;
+}
+.DescTitleTr td img{
+	max-width: 50px;
+}
+.DescIdTd{
+	font-size: 12pt;
+	font-weight: 600;
+	font-family: bmHN;
+}
+.DescDateTd{
+	height: 10px;
+	font-size: 10pt;
+	font-weight: 600;
+	font-family: bmJUA;
+}
+.DescTitleTd{
+	height: 10px;
+	font-size: 12pt;
+	font-weight: 600;
+	font-family: bmYS;
+}
+.DescHashTd{
+	height: 70px;
+	color: #1976D2;
+	font-size: 10pt;
+	font-weight: 600;
+	font-family: bmDH;
+}
+.DescLikeTd{
+	height: 10px;
+	padding-bottom: 20px;
+	border-bottom: .5px #8D6E6388 solid;
+	
+	/*color: #F48FB1;*/
+	font-size: 10pt;
+	font-weight: 500;
+	font-family: bmDH;
+}
+.likeBtn{
+	font-family: bmKH;
+	font-size: 30pt;
+	font-weight: 1400;
+	color: black;
+}
+.commentBtn{
+	font-family: tvNB;
+  	color: black;
+  	font-size: 38px;
+  	font-weight: 1400;
+}
+.DescRShowTd {
+	padding-top: 7px;
+}
+.DescRShowDiv{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	
+	padding-top: 7px;
+	border: none;
+	outline: none;
+	
+	font-size: 13pt;
+	font-weight: 600;
+	font-family: bmYS;
+	
+}
+.DescRShowId{
+	color: #0D47A1;	
+}
+.DescRShowRep{
+	color: black;	
+	
+}
+.DescRepleTd{
+	height: 50px;
+}
+.DescRepleTd textarea{
+	resize: none;
+	width: 100%;
+	height: 48px;
+	border: none;
+	outline: none;
+}
+
+.repleXBtn{
+	color: #9E9E9E;
+}
+
+.DeletePostTd img{
+	width: 30px;
+	height: 30px;
+}
+
+/* post.jsp */
+#postUploadTb{
+	width: 600px;
+	height: 550px;
+	border: 1px #E0E0E0 solid; 
+}
+#postUploadTitleTd{
+	font-size: 25pt;
+	font-weight: 600;
+	font-family: bmHN;
+	height: 80px;
+}
+.postUploadTd{
+	padding-left: 20px;
+	font-size: 15pt;
+	font-weight: 600;
+	font-family: bmHN;
+}
+.postUploadInputTd input{
+	width: 400px;
+	height: 40px;
+	padding-left: 20px;
+	border: 1px solid #E0E0E0;
+	outline: none;
+}
+.postUploadInputTd2 input{
+	width: 400px;
+	height: 40px;
+	padding-left: 20px;
+	outline: none;
+}
+#postUploadBtnTd input {
+	font-size: 18pt;
+	font-weight: 600;
+	font-family: bmHN;
+	width: 60%;
+	height: 50px;
+	background-color: #2196F3;
+	color: white;
+	border: none;
+	border-radius: 5px;
+}
+
+/* home.jsp - no post*/
+#noPostDiv img, #noPostDiv2 img{
+	width: 80px;
+}
+
+#noPostDiv span, #noPostDiv2 span{
+	font-family: bmHN;
+	font-size: 30pt;
+	font-weight: 600;
+}

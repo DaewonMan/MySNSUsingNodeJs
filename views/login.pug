@@ -1,0 +1,26 @@
+extends first
+
+block content
+    #logJoinBd
+        form#loginForm(name="loginForm" action="/auth/login" onsubmit="return loginCheck();" method="post")
+            table#loginTb
+                tr
+                    td#loginTitldTd(align="center") wonsta
+                tr
+                    td.loginInputTd(align="center")
+                        input#loginIdInput(placeholder="아이디" name="wm_id")
+                tr
+                    td.loginInputTd(align="center")
+                        input#loginPwInput(type="password" placeholder="비밀번호" name="wm_pw")
+                tr
+                    td.loginInputTd(align="center")
+                        input#loginBtnInput(type="submit" value="로 그 인")
+                tr
+                    td#loginBottomTd(align="center" valign="top")
+                        span#autologinFont 자동 로그인
+                        input(type="checkbox" name="wm_autologin")
+            table#logToJoinTb
+                tr
+                    td.wantJoinTd 계정이 없으신가요?
+                    td.wantJoinTd
+                        a(href="/join") 가입하기

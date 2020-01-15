@@ -1,0 +1,69 @@
+@charset "EUC-KR";
+@font-face {
+	font-family: tvNB;
+	src: url('../font/tvNBold.ttf');
+}
+@font-face {
+	font-family: bmHN;
+	src: url('../font/BMHANNA_11yrs_ttf.ttf');
+}
+@font-face {
+	font-family: bmJUA;
+	src: url('../font/BMJUA_ttf.ttf');
+}
+@font-face {
+	font-family: bmKH;
+	src: url('../font/BMKIRANGHAERANG-TTF.ttf');
+}
+
+@font-face {
+	font-family: bmDH;
+	src: url('../font/BMDOHYEON_ttf.ttf');
+}
+
+@font-face {
+	font-family: bmYS;
+	src: url('../font/BMYEONSUNG_ttf.ttf');
+}
+@font-face {
+	font-family: gabia;
+	src: url('../font/gabia_solmee.ttf');
+}
+body{
+	margin: 0px;
+}
+
+#firstMainDiv{
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	width: 1110px;
+	height: 650px;
+}
+
+#firstMainTb{
+	width: 100%;
+	height: 100%;
+}
+
+#firstMainImgTd{
+	width: 555px;
+	background-image: url(../img/smartPhone.png);
+	background-position: 0 0;
+    background-size: 100% 100%;
+}
+#firstMainImgDiv{
+	width: 246px;
+	height: 422px;
+	margin: -253.5px 110px;
+	border: none;
+    position: relative;
+}
+.firstMainImg{
+	width: 246px;
+	height: 422px;
+
+	top: 0;
+	left: 0;
+}

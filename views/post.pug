@@ -1,0 +1,26 @@
+extends memberTitle
+
+block contentArea
+    form(action="/post/do" onsubmit="return postCheck();" method="post" enctype="multipart/form-data" name="postForm")
+        table#postUploadTb
+            tr
+                td#postUploadTitleTd(colspan="3" align="center") 게시물 올리기!
+            tr
+                td.postUploadTd 제목 : 
+                td.postUploadInputTd(align="center" colspan="2")
+                    input(placeholder="문구 입력" name="wp_title")
+            tr
+                td.postUploadTd 해쉬태그 : 
+                td.postUploadInputTd(align="center" colspan="2")
+                    input(placeholder="해쉬태그 입력" name="wp_hash")
+            tr
+                td.postUploadTd 사진 : 
+                td.postUploadInputTd2(align="center" style="width:100px")
+                    label#imgLabel(for='imgs') 사진 업로드
+                    input#imgs(type='file' accept='image/*')
+                td(align="left")
+                    img#imgPreview(src='' style='display: none;' width='250' alt='미리보기')
+                    input#imgUrl(type='hidden' name='url')
+            tr
+                td#postUploadBtnTd(colspan="3" align="center")
+                    input(type="submit" value="올 리 기!")

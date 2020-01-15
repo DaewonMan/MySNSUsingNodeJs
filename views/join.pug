@@ -1,0 +1,57 @@
+extends first
+
+block content
+  form(action="/auth/join" onsubmit="return joinCheck();" method="post" enctype="multipart/form-data" name="joinForm")
+    table#joinTb
+      tr
+        td.joinTitleTd(colspan="2" align="center") wonsta
+      tr
+        td.joinCttTd
+          input#joinID(placeholder="ID(최대10자)" name="wm_id")
+        td(align="right")
+          span#joinIDResult ID 입력
+      tr
+        td.joinCttTd(colspan="2")
+          input(type="password" placeholder="Password(소대문자,숫자조합)" name="wm_pw")
+      tr
+        td.joinCttTd(colspan="2")
+          input(type="password" placeholder="Password Check" name="wm_pwChk")
+      tr
+        td.joinCttTd(colspan="2")
+          input(placeholder="Name" name="wm_name")
+      tr
+        td.joinCttTd2(colspan="2")
+          select.joinSelect(name="wm_y")
+            - var y = nowYear - 50;
+            while y <= nowYear
+              option= y++ + '년  '
+          select.joinSelect2(name="wm_m")
+            - var m = 1;
+            while m < 13
+              option= m++ + '월  '
+          select.joinSelect3(name="wm_d")
+            - var d = 1;
+            while d < 32
+              option= d++ + '일'
+      tr
+        td.joinCttTd
+          input#add1(readonly="readonly" placeholder="우편번호" name="wm_add1")
+        td(align="right")
+          span#addrSearch 우편번호검색
+      tr
+        td.joinCttTd(colspan="2")
+          input#add2(readonly="readonly" placeholder="주소" name="wm_add2")
+      tr
+        td.joinCttTd(colspan="2")
+          input(placeholder="상세주소" name="wm_add3")
+      tr
+        td.joinCttTd3(align="center")
+          label#imgLabel(for='imgs') 사진 업로드
+          input#imgs(type='file' accept='image/*')
+        td(align="left")
+          img#imgPreview(src='' style='display: none;' width='250' alt='미리보기')
+          input#imgUrl(type='hidden' name='url')
+      tr
+        td.joinBttTd(align="center" colspan="2")
+          input(type="submit" value="가입하기 ♡")
+    

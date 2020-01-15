@@ -1,0 +1,75 @@
+@charset "EUC-KR";
+@font-face {
+	font-family: tvNB;
+	src: url('/font/tvNBold.ttf');
+}
+@font-face {
+	font-family: bmHN;
+	src: url('/font/BMHANNA_11yrs_ttf.ttf');
+}
+@font-face {
+	font-family: bmJUA;
+	src: url('/font/BMJUA_ttf.ttf');
+}
+@font-face {
+	font-family: bmKH;
+	src: url('/font/BMKIRANGHAERANG-TTF.ttf');
+}
+
+@font-face {
+	font-family: bmDH;
+	src: url('/font/BMDOHYEON_ttf.ttf');
+}
+
+@font-face {
+	font-family: bmYS;
+	src: url('/font/BMYEONSUNG_ttf.ttf');
+}
+@font-face {
+	font-family: gabia;
+	src: url('/font/gabia_solmee.ttf');
+}
+
+body{
+	margin: 0px;
+}
+
+#firstMainDiv{
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	width: 1110px;
+	height: 650px;
+}
+/* 190817 수정 */
+#firstMainTb{
+	width: 50.2%;
+	height: 100%;
+}
+
+/* 190817 수정 */
+#firstMainImgTd{
+	/*width: 555px;*/
+	background-image: url(/img/smartPhone.png);
+	background-position: 0 0;
+	background-size: 100% 100%;
+	/*background-size: 50% 100%;*/
+}
+/* 190817 사진의 큰 틀 */
+#firstMainImgDiv{
+	width: 246px;
+	height: 430px;
+	/*margin: -253.5px 110px;*/
+	margin: -258.5px 191px -913px 107px;
+	border: none;
+    position: relative;
+}
+/* 190817 실 사진 크기 조정 */
+.firstMainImg{
+	width: 246px;
+	height: 418px;
+
+	top: 0;
+	left: 0;
+}

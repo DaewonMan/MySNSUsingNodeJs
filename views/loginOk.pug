@@ -1,0 +1,56 @@
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        title= title
+        meta(name='viewport' content='width=device-width, user-scalable=no')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        link(rel="shortcut icon" href="resources/img/tabimg.ico" type="image/x-icon")
+        link(rel='stylesheet' href='/css/main.css')
+        link(rel='stylesheet' href='/css/first.css')
+        link(rel='stylesheet' href='/css/login.css')
+        link(rel='stylesheet' href='/css/index.css')
+        link(rel='stylesheet' href='/css/follow.css')
+        link(rel='stylesheet' href='/css/post.css')
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+        script(src="/js/member.js")
+        script(src="/js/follow.js")
+        script(src="/js/post.js")
+        script(src="/js/validCheck.js")
+        script(src="/js/loginOk.js")
+        script(src="/js/memberTitle.js")
+        script(src="/js/postDetail.js")
+        script(src="/js/contentArea.js")
+    body#loBd
+        table#mainTb
+            tr#mainTbFistTr
+                td#mainHead(align="center")
+                    table#cttHead
+                        tr
+                            td.cttHeadTd(align="left")
+                                a.homeImg(href="/")
+                                    <img src="/img/wonsta.jpg"><img/> | wonsta
+                            td.cttHeadTd2(align="center")
+                                input#searchInfo(placeholder="검  색")
+                            td.cttHeadTd2(align="right")
+                                div#cttHeadDiv2(align="right")=user.wm_name + ' 님 환영!'			
+                                div#cttHeadDiv(align="right")
+                                    button(onclick="logoutDo();") 로그아웃
+                                    button(onclick="updateDo();") 정보수정
+                                    button(onclick="deleteDo();") 회원삭제
+                                    input#mainUserID(value=user.wm_id style="display:none;")
+                                    input#mainWaveID(value=waveUser.wm_id style="display:none;")
+                                    input#mainWaverOpen(value=waveUser.wm_open style="display:none;")
+            tr
+                td#mainTitle(align="center")
+                    block memberTitle
+            tr
+                td.mainCttTd(align="center" valign="top")
+                    block contentArea
+        if user.wm_id == waveUser.wm_id
+            div#bottomMenuDv(align="center")
+                div#addPostDiv 게시물 추가하기
+        if postDetail != null
+            <div id="showPostDiv">
+                block postDetail
+            </div>

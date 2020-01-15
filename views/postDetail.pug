@@ -1,0 +1,61 @@
+extends contentArea
+
+block postDetail
+    body#postDetailBD
+        table.df
+            tr
+                td.postDetailbtnTd(colspan="2" align="right")
+                    button(onclick="goToMemberDisplay('" + waveUser.wm_id + "','" + user.wm_id + "');") x
+            tr
+                td.postDetailImgTd(align="center")
+                    img(src=postDetail.wp_img)
+                td.postDetailDescTd(valign="top" align="center")
+                    table#postDetailDescTb
+                        tr.DescTitleTr
+                            td(align="center")
+                                img(src=waveUser.wm_img)
+                            td.DescIdTd= postDetail.wp_id
+                            td.DeletePostTd(align="right")
+                                if user.wm_id == waveUser.wm_id
+                                    img#trashImg(src="/img/trash1.jpg" onclick="postDeleteDo('" + postDetail.id + "');")
+                        tr
+                            td.DescDateTd(colspan="3" align="right")
+                                -function prettyDate(dateString){
+                                    -//if it's already a date object and not a string you don't need this line:
+                                    -var date = new Date(dateString);
+                                    -var d = date.getDate();
+                                    -var m = date.getMonth();
+                                    -var y = date.getFullYear();
+                                    -return y + '-' + m + '-' + d;
+                                -}
+                                div #{prettyDate(postDetail.createdAt)}
+                        tr
+                            td.DescTitleTd(colspan="3" align="center")= postDetail.wp_title
+                        tr
+                            td.DescHashTd(colspan="3" align="center")= postDetail.wp_hash
+                        tr
+                            td.DescLikeTd(colspan="3")
+                                span.likeBtn ♡
+                                ="   "
+                                span.commentBtn ☆
+                                br
+                                ="좋아요: "
+                                span.likeCnt
+                                ="개, 댓글: "
+                                span.commentCnt= reple.length
+                                ="개"
+                        tr
+                            td.DescRShowTd(colspan="3" valign="top")
+                                div.DescRShowDiv
+                                    each r in reple
+                                        div(class="eachReples" + r.id)
+                                            span.DescRShowId= r.wr_id + " : " 
+                                            span.DescRShowRep= r.wr_reple
+                                            if r.wr_id ==  user.wm_id
+                                                span.repleXBtn(onclick="repleDeleteDo('" + r.id + "','" + r.wr_rno + "');")= "    x"
+                                                p
+                        tr
+                            td.DescRepleTd(colspan="3")
+                                textarea#repleArea(name="wr_reple" placeholder="댓글 달기..." )
+                                input#replePnoArea(name="wr_pno" value=postDetail.id style="display:none;")
+                                input#repleIdArea(name="wr_id" value=user.wm_id style="display:none;")

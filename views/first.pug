@@ -1,0 +1,36 @@
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        title= title
+        meta(name='viewport' content='width=device-width, user-scalable=no')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        link(rel='stylesheet' href='/css/main.css')
+        link(rel='stylesheet' href='/css/first.css')
+        link(rel='stylesheet' href='/css/login.css')
+        link(rel='stylesheet' href='/css/jquery.bxslider.css')
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+        //script(src="/js/jquery.bxslider.js")
+        script(src="/js/jquery.bxslider.min.js")
+        script(src="/js/first.js")
+        script(src="/js/member.js")
+        script(src="/js/login.js")
+        script(src="/js/join.js")
+        script(src="/js/validCheck.js")
+        script(src="http://dmaps.daum.net/map_js_init/postcode.v2.js")
+        script(src="/js/address.js")
+
+
+    body
+        div#firstMainDiv
+            table#firstMainTb
+                tr
+                    td#firstMainImgTd
+                        div#firstMainImgDiv
+                            div#slider
+                                img.firstMainImg(src="/img/wonsta.jpg")
+                                img.firstMainImg(src="/img/bench.jpg")
+                                img.firstMainImg(src="/img/pado.jpg")
+                                img.firstMainImg(src="/img/eunha.jpg")
+                    td
+                        block content

@@ -1,0 +1,147 @@
+@charset "EUC-KR";
+
+#followBnt, #postOpen{
+	height: 23px;
+	border: none;
+	outline: none;
+	
+	background-color: #0D47A1;
+	background-image: linear-gradient(to left, transparent, transparent 50%, #EF6C00 50%, #EF6C00);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+	transition: all .3s ease;
+	
+	color: white;
+	
+	font-size: 11pt;
+	font-weight: 600;
+}
+#followBnt:hover, #postOpen:hover{
+	background-position: 0 0;
+    color:#333333;
+}
+
+#followingBnt, #postClose, #followWaitBnt{
+	height: 23px;
+	border: 1px solid #E0E0E0;
+	border-radius: 3px;
+	outline: none;
+	
+	background-color: white;
+	background-image: linear-gradient(to left, transparent, transparent 50%, #EF6C00 50%, #EF6C00);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+	transition: all .3s ease;
+	
+	color: black;
+	
+	font-size: 11pt;
+	font-weight: 600;
+}
+#followingBnt:hover, #postClose:hover, #followWaitBnt:hover{
+	background-position: 0 0;
+    color:#333333;
+}
+
+#searchFollowerDiv, #searchWaiterDiv{
+	z-index: 1;
+	background-color: #111111CC;
+	
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+	position: fixed;
+}
+
+#closeDiv{
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	
+	font-family: bmHN;
+	font-size: 25pt;
+	font-weight: 600;
+	color: white;
+}
+
+#followDiv, #waiterDiv{
+	left: 50%;
+	margin-left: -300px;
+	position: absolute;
+	top: 80px;
+	width: 600px;
+	height: 600px;
+	
+	
+	border: solid 1px #e6e6e6;
+	border-radius: 3px;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.0975);
+	
+	background-color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.followTb, .waiterTb{
+	width: 100%;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	transition: .3s ease;
+}
+.followTb:hover, .waiterTb:hover {
+	background-color: #D7CCC8;
+}
+
+.noFollowDiv, .noWaiterDiv{
+	font-family: bmKH;
+	font-size: 25pt;
+	font-weight: 800;
+	text-align: center;
+	padding-top: 50px;
+	
+	left: 50%;
+	margin-left: -300px;
+	position: absolute;
+	top: 150px;
+	width: 600px;
+	height: 100px;
+	
+	border: solid 1px #e6e6e6;
+	border-radius: 3px;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.0975);
+	
+	background-color: white;
+}
+
+.followOkBnt {
+	background-color: #2196F3;
+	color: white;
+	font-family: bmDH;
+	font-size: 10pt;
+	font-weight: 600;
+	
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	
+	width: 50px;
+	height: 30px;
+}
+.followDelBnt{
+	margin-left: 7px;
+	border: 1px solid #795548;
+	border-radius: 5px;
+	background-color: white;
+	color: #795548;
+	outline: none;
+	
+	font-family: bmDH;
+	font-size: 10pt;
+	font-weight: 600;
+	
+	width: 50px;
+	height: 30px;
+}

@@ -1,0 +1,26 @@
+extends loginOk
+
+block memberTitle
+    table#cttTitle
+        tr
+            td.logOkImgTd(align="center")
+                img(src=waveUser.wm_img)
+            td(align="center")
+                table#profileTb
+                    tr
+                        td(colspan="2")=waveUser.wm_id
+                        td
+                            if user.wm_id != waveUser.wm_id
+                                button#followBnt 팔로우
+                            else
+                                button#postOpen 전체공개
+                    tr
+                        td= "게시물: " + post.length 
+                            span#postCntSpan
+                        td#followerTd(style="cursor: pointer;") 팔로워: 
+                            span#followerCntSpan
+                        td#followTd(style="cursor: pointer;") 팔로우: 
+                            span#followCntSpan
+                    tr
+                        td(colspan="3")=waveUser.wm_name
+            td(align="center")
